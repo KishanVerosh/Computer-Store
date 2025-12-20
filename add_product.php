@@ -1,4 +1,13 @@
 <?php
+
+session_start();
+
+// Check if the admin is logged in
+if (!isset($_SESSION['admin_id'])) {
+    header('Location: login.php');
+    exit();
+}
+
 // Include the database connection
 require_once 'db_connection.php';
 
