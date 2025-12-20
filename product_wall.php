@@ -83,6 +83,7 @@ $result = $stmt->get_result();
             flex-wrap: wrap;
             gap: 20px;
             padding: 20px;
+            padding-left: 100px;
         }
         .product-box {
             border: 1px solid #ddd;

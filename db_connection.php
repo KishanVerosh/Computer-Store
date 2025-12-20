@@ -1,9 +1,12 @@
 <?php
+
+$env = parse_ini_file(__DIR__. '/.env');
+
 // Database connection
-$servername = "sql313.infinityfree.com";
-$username = "if0_38300532";
-$password = "0QZrmFZsjDFU";
-$dbname = "if0_38300532_store";
+$servername = $env['DB_HOST'];
+$username = $env['DB_USER'];
+$password = $env['DB_PASS'];
+$dbname = $env['DB_NAME'];
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
